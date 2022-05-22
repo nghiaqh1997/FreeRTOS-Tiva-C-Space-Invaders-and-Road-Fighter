@@ -1,0 +1,8 @@
+
+**** Build of configuration Debug for project 5510lcd ****
+
+/home/nghia/ti/ccs1020/ccs/utils/bin/gmake -k -j 4 all -O 
+ 
+gmake[1]: '5510lcd.out' is up to date.
+
+**** Build Finished ****

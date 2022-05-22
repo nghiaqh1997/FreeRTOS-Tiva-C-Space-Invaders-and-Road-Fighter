@@ -1,0 +1,22 @@
+/*
+ * Task4.c
+ *
+ *  Created on: May 19, 2022
+ *      Author: nghia
+ */
+#include "include.h"
+
+
+void vTask4(void *pvParameters){
+    portTickType xLastTaskWakeTime = xTaskGetTickCount();
+    while(1){
+        if(Start){
+            Nokia5110_ClearBuffer();
+            Nokia5110_DisplayBuffer();
+        }
+        vTaskDelayUntil(&xLastTaskWakeTime, pdMS_TO_TICKS(35));
+    }
+}
+
+
+

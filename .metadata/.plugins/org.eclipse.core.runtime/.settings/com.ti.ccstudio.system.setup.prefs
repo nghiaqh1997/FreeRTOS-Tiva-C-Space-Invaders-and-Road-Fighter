@@ -1,0 +1,2 @@
+DEFAULT_CCS_TARGET_CONFIGURATION=/home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/PROJECT_TIVA/freertos_demo/target_config.ccxml
+eclipse.preferences.version=1

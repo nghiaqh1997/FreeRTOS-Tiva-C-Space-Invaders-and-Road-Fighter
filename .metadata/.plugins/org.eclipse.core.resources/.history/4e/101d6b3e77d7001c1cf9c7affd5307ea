@@ -1,0 +1,32 @@
+/*
+ * Task2.c
+ *
+ *  Created on: May 18, 2022
+ *      Author: nghia
+ */
+#include "include.h"
+#include "Images.h"
+#include "Task_def.h"
+#include "Nokia5110/SPI.h"
+#include "sprite.h"
+void ADCSS3Handle(){
+    ADCIntClear(ADC0_BASE, 3);
+    portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
+    xSemaphoreGiveFromISR(xSemaphore1,&xHigherPriorityTaskWoken);
+    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+}
+void vTask2(void *pvParameters){
+    uint16_t Value;
+    portTickType xLastTaskWakeTime = xTaskGetTickCount();
+    xSemaphoreTake(xSemaphore1,0);
+    while(1){
+        if(xSemaphoreTake(xSemaphore1,portMAX_DELAY)){
+            ADCSequenceDataGet(ADC0_BASE, 3, &Value);
+            UARTprintf("%d",Value);
+        }
+    }
+}
+
+
+
+

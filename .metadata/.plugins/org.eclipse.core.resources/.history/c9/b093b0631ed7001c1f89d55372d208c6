@@ -1,0 +1,7 @@
+#ifndef FSM_FSM_H_
+#define FSM_FSM_H_
+
+void Level1();
+void NokiaStateMachineUpdate();
+void PortFIntHandler();
+#endif

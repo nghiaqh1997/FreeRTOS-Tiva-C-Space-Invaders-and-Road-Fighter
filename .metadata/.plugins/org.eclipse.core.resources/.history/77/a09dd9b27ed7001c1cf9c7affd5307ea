@@ -1,0 +1,18 @@
+/*
+ * Task3.c
+ *
+ *  Created on: May 19, 2022
+ *      Author: nghia
+ */
+#include "include.h"
+
+
+void vTask3(void *pvParameters){
+    portTickType xLastTaskWakeTime = xTaskGetTickCount();
+    while(1){
+
+    }
+}
+
+
+

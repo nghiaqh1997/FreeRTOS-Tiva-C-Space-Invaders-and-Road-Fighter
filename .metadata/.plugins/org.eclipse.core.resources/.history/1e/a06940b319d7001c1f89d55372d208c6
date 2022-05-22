@@ -1,0 +1,5 @@
+#ifndef FSM_FSM_H_
+#define FSM_FSM_H_
+typedef enum {S0=0,S1,S2,S3 } State;
+extern State State_1 = S0;
+#endif

@@ -1,0 +1,24 @@
+/*
+ * Task6.c
+ *
+ *  Created on: May 21, 2022
+ *      Author: nghia
+ */
+#include "include.h"
+#include "Images.h"
+#include "Task_def.h"
+#include "Nokia5110/SPI.h"
+#include "sprite.h"
+#include "FSM/FSM.h"
+void prvAutoReloadTimerCallback(TimerHandle_t xTimer){
+    TickType_t xTimeNow;
+    xTimeNow = xTaskGetTickCount();
+    static int a = 0;
+    a++;
+    int Number = (xTimeNow + Player.x + a)%15 ;
+    UARTprintf("%d\n",Number);
+    if(Enemy[number])
+}
+
+
+

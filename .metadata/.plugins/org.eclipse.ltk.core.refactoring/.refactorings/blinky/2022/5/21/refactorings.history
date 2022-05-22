@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;blinky/pins.h&apos; to &apos;pins-energia.h&apos;" description="Rename resource &apos;pins.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="pins.h" name="pins-energia.h" stamp="1652664292164" updateReferences="true"/>
+</session>

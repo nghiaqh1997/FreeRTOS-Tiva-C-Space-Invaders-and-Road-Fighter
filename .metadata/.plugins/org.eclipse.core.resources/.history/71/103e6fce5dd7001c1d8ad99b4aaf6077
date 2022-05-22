@@ -1,0 +1,17 @@
+/*
+ * Random.c
+ *
+ *  Created on: May 19, 2022
+ *      Author: nghia
+ */
+#include "include"
+int Random(void)
+{
+    
+    Random_number = NVIC_ST_CURRENT_R+(slider_pos*10000)+Random_number;
+//  number = number % 28;
+    return (Random_number %26);
+}
+
+
+

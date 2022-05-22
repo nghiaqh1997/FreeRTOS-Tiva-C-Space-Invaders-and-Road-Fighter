@@ -1,0 +1,53 @@
+/*
+ * Display_objects.h
+ *
+ *  Created on: May 19, 2022
+ *      Author: nghia
+ */
+
+#ifndef DISPLAY_OBJECTS_H_
+#define DISPLAY_OBJECTS_H_
+
+const unsigned char SmallEnemy30PointA[];
+const unsigned char SmallEnemy30PointB[];
+const unsigned char SmallEnemy20PointA[];
+const unsigned char SmallEnemy20PointB[];
+const unsigned char SmallEnemy10PointA[];
+const unsigned char SmallEnemy10PointB[];
+const unsigned char PlayerShip0[];
+const unsigned char SmallEnemyBonus0[];
+const unsigned char Bunker0[];
+const unsigned char Bunker1[];
+const unsigned char Bunker2[];
+const unsigned char Bunker3[];
+const unsigned char BigExplosion0[];
+const unsigned char BigExplosion1[];
+const unsigned char SmallExplosion0[];
+const unsigned char SmallExplosion1[];
+const unsigned char Missile0[];
+const unsigned char Missile1[];
+const unsigned char Missile2[];
+const unsigned char Laser0[];
+const unsigned char Laser1[];
+
+// *************************** Capture image dimensions out of BMP**********
+#define BUNKERW     ((unsigned char)Bunker0[18])
+#define BUNKERH     ((unsigned char)Bunker0[22])
+#define ENEMY30W    ((unsigned char)SmallEnemy30PointA[18])
+#define ENEMY30H    ((unsigned char)SmallEnemy30PointA[22])
+#define ENEMY20W    ((unsigned char)SmallEnemy20PointA[18])
+#define ENEMY20H    ((unsigned char)SmallEnemy20PointA[22])
+#define ENEMY10W    ((unsigned char)SmallEnemy10PointA[18])
+#define ENEMY10H    ((unsigned char)SmallEnemy10PointA[22])
+#define ENEMYBONUSW ((unsigned char)SmallEnemyBonus0[18])
+#define ENEMYBONUSH ((unsigned char)SmallEnemyBonus0[22])
+#define LASERW      ((unsigned char)Laser0[18])
+#define LASERH      ((unsigned char)Laser0[22])
+#define MISSILEW    ((unsigned char)Missile0[18])
+#define MISSILEH    ((unsigned char)Missile0[22])
+#define PLAYERW     ((unsigned char)PlayerShip0[18])
+#define PLAYERH     ((unsigned char)PlayerShip0[22])
+
+
+
+#endif /* DISPLAY_OBJECTS_H_ */

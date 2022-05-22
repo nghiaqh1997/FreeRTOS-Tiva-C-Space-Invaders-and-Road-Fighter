@@ -1,0 +1,26 @@
+/*
+ * Task2.c
+ *
+ *  Created on: May 18, 2022
+ *      Author: nghia
+ */
+#include "include.h"
+#include "Images.h"
+#include "Task_def.h"
+#include "Nokia5110/SPI.h"
+#include "sprite.h"
+void ADCSS3Handle(){
+    ADCIntClear(ADC0_BASE, 3);
+    portBASE_TYPE xHigherPriorityTaskWoken = pdFALSE;
+
+}
+void vTask2(void *pvParameters){
+    portTickType xLastTaskWakeTime = xTaskGetTickCount();
+    while(1){
+
+    }
+}
+
+
+
+

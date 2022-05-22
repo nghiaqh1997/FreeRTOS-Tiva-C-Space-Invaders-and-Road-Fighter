@@ -1,0 +1,28 @@
+/*
+ * Task3.c
+ *
+ *  Created on: May 19, 2022
+ *      Author: nghia
+ */
+#include "include.h"
+#include "Images.h"
+#include "Task_def.h"
+#include "Nokia5110/SPI.h"
+#include "sprite.h"
+#include "FSM/FSM.h"
+uint16_t ledTimer = 0;
+void vTask3(void *pvParameters){
+    portTickType xLastTaskWakeTime = xTaskGetTickCount();
+    portLONG lReceiveValue;
+    while(1){
+        if(ledTimer>0){
+            ledTimer = ledTimer - 35;
+        }
+        xQueueReceive(xQueue1, &lReceiveValue, 0);
+        StateMachineUpdate();
+        vTaskDelayUntil(&xLastTaskWakeTime, pdMS_TO_TICKS(35));
+    }
+}
+
+
+

@@ -1,0 +1,53 @@
+#include "../include.h"
+#include "../Images.h"
+#include "../Task_def.h"
+#include "../Nokia5110/SPI.h"
+#include "../sprite.h"
+#include "FSM.h"
+typedef enum {S0=0,S1,S2,S3,S4} State;
+static State State_1 = S0;
+
+void StateMachineUpdate(){
+    switch(State_1){
+    case S0:
+        if(Start){
+            State_1 = S1;
+        }
+        break;
+    case S1:
+        if(Player.life == 0){
+            ledTimer = 1980;
+        }else if(Player.point == 15){
+            State_1 = S3;
+        }
+        if(ledTimer==0){
+            State_1 =S2;
+        }
+        break;
+    case S2:
+    case S3:
+        State_1 = S0;
+        break;
+    }
+    switch(State_1){
+    case S0:
+        Start = 0;
+        break;
+    case S1:
+        xSemaphoreTake(xMutex1,portMAX_DELAY);
+        Nokia5110_ClearBuffer();
+        Player_Draw();
+        Bunker_Draw();
+        Enemy_Draw();
+        Missile_Draw();
+        Nokia5110_DisplayBuffer();
+        xSemaphoreGive(xMutex1);
+        break;
+    case S2:
+        Nokia5110_OutString("*----------* GAME OVER   TRY AGAIN  *----------**----------**----------*");
+        break;
+    case S3:
+        Nokia5110_OutString("*----------*   WINNER      WINNER      CHICKEN     DINNER   *----------*");
+        break;
+    }
+}

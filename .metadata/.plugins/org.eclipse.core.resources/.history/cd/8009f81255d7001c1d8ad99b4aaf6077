@@ -1,0 +1,19 @@
+/*
+ * Task2.c
+ *
+ *  Created on: May 18, 2022
+ *      Author: nghia
+ */
+#include "include.h"
+
+
+void vTask2(void *pvParameters){
+    portTickType xLastTaskWakeTime = xTaskGetTickCount();
+    while(1){
+
+    }
+}
+
+
+
+

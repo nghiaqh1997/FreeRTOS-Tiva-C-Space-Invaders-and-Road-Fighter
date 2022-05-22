@@ -1,0 +1,15 @@
+/*
+ * Random.h
+ *
+ *  Created on: May 19, 2022
+ *      Author: nghia
+ */
+
+#ifndef RANDOM_H_
+#define RANDOM_H_
+
+extern int Random(void);
+
+
+
+#endif /* RANDOM_H_ */

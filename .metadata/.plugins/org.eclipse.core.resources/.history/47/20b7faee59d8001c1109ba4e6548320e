@@ -1,0 +1,37 @@
+/*
+ * Task4.c
+ *
+ *  Created on: May 19, 2022
+ *      Author: nghia
+ */
+#include "include.h"
+#include "Images.h"
+#include "Task_def.h"
+#include "Nokia5110/SPI.h"
+#include "sprite.h"
+#include "FSM/FSM.h"
+
+void PortAIntHandler(){
+    uint32_t status = 0;
+    status = GPIOIntStatus(GPIO_PORTA_BASE, true);
+    GPIOIntClear(GPIO_PORTA_BASE, status);
+    if((status&GPIO_INT_PIN_5)==GPIO_INT_PIN_5){
+        if(GPIOPinRead(GPIO_PORTA_BASE, GPIO_PIN_5)){
+            Missile[i].life = 1;
+        }
+    }
+    if((status&GPIO_INT_PIN_6)==GPIO_INT_PIN_6){
+        if(GPIOPinRead(GPIO_PORTA_BASE, GPIO_PIN_6)){
+            GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_7, 0);
+        }
+    }
+}
+void vTask4(void *pvParameters){
+    portTickType xLastTaskWakeTime = xTaskGetTickCount();
+    while(1){
+
+    }
+}
+
+
+

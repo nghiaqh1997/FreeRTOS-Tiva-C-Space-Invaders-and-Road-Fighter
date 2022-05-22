@@ -1,0 +1,13 @@
+/*
+ * Objects.c
+ *
+ *  Created on: May 19, 2022
+ *      Author: nghia
+ */
+#include "Objects.h"
+
+#define BUNKERMAXHP 30
+
+
+
+
