@@ -26,6 +26,11 @@ The game consists one level. You have to kill 15 enemies. Enemy will try to kill
 ### III.Putting It Together
 <a name="BillofMaterials"></a>
 #### 1.Bill of Materials
+- [TM4C123GXL - LAUNCHPAD Tiva C](https://www.ti.com/tool/EK-TM4C123GXL)
+- [Nokia 5110 LCD](https://www.sparkfun.com/products/10168)
+- [Potentionmeter 10K Ohm](https://www.amazon.com/Best-Sellers-Potentiometers/zgbs/industrial/306810011)
+- [Buttons](http://www.eu.diigiit.com/mini-pushbutton-switch)
+- [Jumper wire male male](https://www.amazon.com/Solderless-Flexible-Breadboard-Jumper-Arduino/dp/B00ARTWJ44)
 <a name="Wiring"></a>
 #### 2.Wiring
 <a name="Display"></a>
