@@ -26,3 +26,9 @@ The game consists one level. You have to kill 15 enemies. Enemy will try to kill
 ### III.Putting It Together
 <a name="BillofMaterials"></a>
 #### 1.Bill of Materials
+<a name="Wiring"></a>
+#### 2.Wiring
+<a name="Display"></a>
+#### 3.Display
+<a name="4"></a>
+#### 4.Potentiometer and buttons
