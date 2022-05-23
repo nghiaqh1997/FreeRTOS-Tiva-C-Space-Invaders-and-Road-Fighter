@@ -33,9 +33,17 @@ The game consists one level. You have to kill 15 enemies. Enemy will try to kill
 - [Jumper wire male male](https://www.amazon.com/Solderless-Flexible-Breadboard-Jumper-Arduino/dp/B00ARTWJ44)
 <a name="Wiring"></a>
 #### 2.Wiring
-<a name="Display"></a>
 ![](1.jpg)
 ![](2.png)
+<a name="Display"></a>
 #### 3.Display
+- 1 -> PB3
+- 2 -> PB5
+- 3 -> PB2
+- 4 -> PB7
+- 5 -> PB4
+- 6 -> 3V3
+- 7 -> GND
+- 8 -> GND
 <a name="4"></a>
 #### 4.Potentiometer and buttons
