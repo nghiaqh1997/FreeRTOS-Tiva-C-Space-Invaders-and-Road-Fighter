@@ -10,9 +10,7 @@
 - [3.Display](#Display)
 - [4.Potentiometer and buttons](#4)
 
-[IV.Programming](#Programming)
-- [1.IDE](#IDE)
-- [2.Libraries](#Lib)
+[IV.Software-and-Hardware-Used](#Software-and-Hardware-Used)
 
 ===========================
 
@@ -56,3 +54,7 @@ The game consists one level. You have to kill 15 enemies. Enemy will try to kill
 - POT -> PE2
 - BUTTONS -> PA5,PA6
 - LED -> PA7
+<a name = "Software-and-Hardware-Used"></a>
+### IV.Software-and-Hardware-Used
+- This project is completly wrriten in C and run and tested at CCS.
+- To run and test this project you only must have Tiva c, Nokia 5110 LCD, 2 Buttons, 1 Led, and potentiometer.
