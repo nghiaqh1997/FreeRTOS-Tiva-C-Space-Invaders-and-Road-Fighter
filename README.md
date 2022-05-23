@@ -27,11 +27,14 @@ The game consists one level. You have to kill 15 enemies. Enemy will try to kill
 <a name="BillofMaterials"></a>
 #### 1.Bill of Materials
 - [TM4C123GXL - LAUNCHPAD Tiva C](https://www.ti.com/tool/EK-TM4C123GXL)
-- ![](https://www.ti.com/content/dam/ticom/images/products/ic/processors/evm-boards/ek-tm4c123gxl-angled.png:large)
+![](https://www.ti.com/content/dam/ticom/images/products/ic/processors/evm-boards/ek-tm4c123gxl-angled.png:large)
 - [Nokia 5110 LCD](https://www.sparkfun.com/products/10168)
+![](https://cdn.sparkfun.com//assets/parts/4/4/7/3/10168-01a.jpg)
 - [Potentionmeter 10K Ohm](https://www.amazon.com/Best-Sellers-Potentiometers/zgbs/industrial/306810011)
+![](https://cf.shopee.vn/file/93110505432fb2eb36c1f2a566945cf0)
 - [Buttons](http://www.eu.diigiit.com/mini-pushbutton-switch)
 - [Jumper wire male male](https://www.amazon.com/Solderless-Flexible-Breadboard-Jumper-Arduino/dp/B00ARTWJ44)
+- ![](https://m.media-amazon.com/images/I/414Fn43RXVL._AC_SX425_.jpg)
 <a name="Wiring"></a>
 #### 2.Wiring
 ![](1.jpg)
