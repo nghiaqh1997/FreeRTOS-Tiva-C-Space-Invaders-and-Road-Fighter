@@ -34,7 +34,7 @@ The game consists one level. You have to kill 15 enemies. Enemy will try to kill
 <a name="Wiring"></a>
 #### 2.Wiring
 <a name="Display"></a>
-<img src=[http://i.imgur.com/qkmdJSR.png](https://github.com/nghiaqh1997/Project-Tiva-FreeRTOS/blob/master/1.jpg)>
+![](1.jpg)
 #### 3.Display
 <a name="4"></a>
 #### 4.Potentiometer and buttons
