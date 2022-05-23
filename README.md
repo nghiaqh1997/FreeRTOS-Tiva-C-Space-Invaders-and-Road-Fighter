@@ -47,3 +47,6 @@ The game consists one level. You have to kill 15 enemies. Enemy will try to kill
 - 8 -> GND
 <a name="4"></a>
 #### 4.Potentiometer and buttons
+- POT -> PE2
+- BUTTONS -> PA5,PA6
+- LED -> PA7
