@@ -35,6 +35,7 @@ The game consists one level. You have to kill 15 enemies. Enemy will try to kill
 #### 2.Wiring
 <a name="Display"></a>
 ![](1.jpg)
+![](2.png)
 #### 3.Display
 <a name="4"></a>
 #### 4.Potentiometer and buttons
