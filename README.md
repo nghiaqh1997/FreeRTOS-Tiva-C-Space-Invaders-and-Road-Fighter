@@ -1,4 +1,4 @@
-# SPACE-INVADERS-FREERTOS-TIVA-C
+# SPACE-INVADERS-AND-ROAD-FIGHTER-FREERTOS-TIVA-C
 ## Table Content
 [I.Description](#Description)
 
@@ -19,7 +19,8 @@
 This is a my final project at course Embedded System Progamming at HCMUT. The project idea is to make Space Invaders game with my LaunchPad to apply all concepts that teached through this course like ADC,GPIO,Interrupts,SPI,Timer,FreeRTOS...etc. Only Demo, not Professional. 
 <a name="Game"></a>
 ### II.Game-Instructions
-The game consists one level. You have to kill 15 enemies. Enemies will try to kill you by their laser shoots so you need to dodge it and kill enemies before you are be killed or enemies reaches bottom line. You have Fire button, POT(to change resistor value) to move, LCD to visualize the game and a special button to clear all laser on screen (but need time to charge). 
+The game consists two games.At 1st game you have to kill 15 enemies. Enemies will try to kill you by their laser shoots so you need to dodge it and kill enemies before you are be killed or enemies reaches bottom line. You have Fire button, POT(to change resistor value) to move, LCD to visualize the game and a special button to clear all laser on screen (but need time to charge). 
+At 2nd game you control a car on the road. Your mission try to dodge all vehicle going in the opposite direction. This game like survival mode. No score this game will run idenfinitely if you don't die :v 
 <a name="PuttingItTogether"></a>
 ### III.Putting It Together
 <a name="BillofMaterials"></a>
