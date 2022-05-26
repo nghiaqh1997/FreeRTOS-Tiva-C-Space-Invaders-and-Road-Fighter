@@ -9,7 +9,7 @@
 #define SPRITE_H_
 #include "stdint.h"
 typedef struct {
-    uint8_t x;
+    volatile uint8_t x;
     uint8_t y;
     uint8_t life;
     uint8_t point;
@@ -39,4 +39,19 @@ extern void Player_Missile_Init();
 extern void Player_Missile_Draw();
 extern void Player_Missile_Move();
 extern void AutoFire();
+extern void Draw();
+////////////////////////////////////////////////////////////////////////////////////////////////
+typedef struct{
+    volatile unsigned int x;
+    unsigned int y;
+    unsigned const char *image;
+    unsigned int life;
+}car_on_road;
+car_on_road Player1;
+car_on_road Enemy1[2];
+extern unsigned int count,road_flag;
+extern void RoadMove();
+extern void Car_Init();
+extern void Car_Create();
+extern void GameOver1();
 #endif /* SPRITE_H_ */

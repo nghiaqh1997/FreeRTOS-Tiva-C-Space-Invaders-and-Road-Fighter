@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Player.life = 0"/>
+		<item key="selection" value="Player.x"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="Player.x"/>
+			<item value="ui32ADC0"/>
+			<item value="ui32ADC0Value"/>
+			<item value="BigExplosion"/>
+			<item value="Laser1"/>
+			<item value="Missile2"/>
+			<item value="Missile0"/>
+			<item value="Missile1"/>
+			<item value="SmallExplosion1"/>
 			<item value="Player.life = 0"/>
 			<item value="player"/>
 			<item value="explode"/>
 			<item value="SmallExplosion"/>
-			<item value="SmallExplosion1"/>
 			<item value="Player.life"/>
 			<item value="player.life"/>
-			<item value=" IntPrioritySet"/>
-			<item value="configASSERT"/>
-			<item value="DEBUG"/>
-			<item value="Missile"/>
-			<item value="missile[0]"/>
-			<item value="Missile[0]"/>
-			<item value="Player_Missile"/>
-			<item value="a"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Player_Missile"/>
@@ -30,8 +30,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="0"/>
-		<item key="DIALOG_Y_ORIGIN" value="166"/>
+		<item key="DIALOG_X_ORIGIN" value="934"/>
+		<item key="DIALOG_Y_ORIGIN" value="137"/>
 		<item key="DIALOG_WIDTH" value="348"/>
 		<item key="DIALOG_HEIGHT" value="437"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>

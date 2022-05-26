@@ -12,6 +12,7 @@ extern void Uart_Init(void);
 extern void Timer_Init(void);
 //extern void ADCSS3Handle(void);
 extern void ADC_Timer_Init(void);
+extern void ADC_Init();
 extern void PortA_Init(void);
 //extern void PortAIntHandle();
 extern void Interrupt_GPIOA_Init();

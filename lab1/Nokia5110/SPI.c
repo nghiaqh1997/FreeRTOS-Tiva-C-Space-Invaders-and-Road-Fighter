@@ -12,18 +12,25 @@ enum typeOfWrite{
     COMMAND=0,                              // the transmission is an LCD command
     DATA                                  // the transmission is data
 };
+#define SSI2_SR_R               (*((volatile uint32_t *)0x4000A00C))
+#define SSI2_DR_R               (*((volatile uint32_t *)0x4000A008))
 uint8_t Screen[504];
 void static lcdwrite(enum typeOfWrite type, char message){
     if(type == COMMAND){
         while(SSIBusy(SSI2_BASE)){};
+        //while((SSI2_SR_R&SSI_SR_BSY)==SSI_SR_BSY){};
         GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_2, 0);
         SSIDataPut(SSI2_BASE, (uint32_t)message);
+        //SSI2_DR_R = message;
         while(SSIBusy(SSI2_BASE)){};
+        //while((SSI2_SR_R&SSI_SR_BSY)==SSI_SR_BSY){};
     } else{
         while(SSIBusy(SSI2_BASE)){};
+        //while((SSI2_SR_R&SSI_SR_TNF)==0){};
         GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_2, GPIO_PIN_2);
+        //SSI2_DR_R = message;
         SSIDataPut(SSI2_BASE, (uint32_t)message);
-        while(SSIBusy(SSI2_BASE)){};
+        //while(SSIBusy(SSI2_BASE)){};
     }
 }
 void Nokia5110_Init(){
@@ -221,4 +228,41 @@ void Nokia5110_PrintBMP(unsigned char xpos, unsigned char ypos, const unsigned c
         }
     }
 }
+void Nokia5110_Setpix(unsigned char newX, unsigned char newY, unsigned char data){
+  if((newX > 84) || (newY > 5)){        // bad input
+    return;                             // do nothing
+  }
+  // multiply newX by 7 because each character is 7 columns wide
+  lcdwrite(COMMAND, 0x80|newX);     // setting bit 7 updates X-position
+  lcdwrite(COMMAND, 0x40|newY);         // setting bit 6 updates Y-position
+    lcdwrite(DATA, data);
+}
+void Nokia5110_customtext (){
+  int i,j,cursor_position_x=70,cursor_position_y;
+    cursor_position_y = 0;
+    Nokia5110_Setpix(cursor_position_x,cursor_position_y,0);
+  for(j=0; j <8; j++)
+    {
 
+        if(j>=0 && j<4 )
+        {
+        cursor_position_y += 1;
+        cursor_position_x =70;
+        }
+        if(j==4)
+        {
+        cursor_position_y = 1;
+        cursor_position_x = 60;
+        }
+        Nokia5110_Setpix(cursor_position_x,cursor_position_y,0);
+  for(i=0; i<10; i=i+1){
+    lcdwrite(DATA, Game_over[j][i]);
+    }
+        if(j>3)
+        {
+            cursor_position_y +=1;
+        }
+
+
+  }
+}

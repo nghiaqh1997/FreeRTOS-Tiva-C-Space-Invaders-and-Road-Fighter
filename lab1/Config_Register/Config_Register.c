@@ -127,6 +127,21 @@ void ADC_Timer_Init(){
     //IntPrioritySet(INT_ADC0SS3, 5<<5);
     //IntMasterEnable();
 }
+void ADC_Init(){
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
+    SysCtlDelay(3);
+    GPIOPinTypeGPIOInput(GPIO_PORTE_BASE, GPIO_PIN_2);
+    GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_2);
+
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);
+    SysCtlDelay(3);
+    ADCHardwareOversampleConfigure(ADC0_BASE, 16);
+    ADCSequenceDisable(ADC0_BASE, 3);
+    ADCSequenceConfigure(ADC0_BASE, 3, ADC_TRIGGER_PROCESSOR, 0);
+    ADCSequenceStepConfigure(ADC0_BASE, 3, 0, ADC_CTL_CH1|ADC_CTL_IE|ADC_CTL_END);
+    ADCSequenceEnable(ADC0_BASE, 3);
+
+}
 void PortA_Init(void){
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
     SysCtlDelay(3);

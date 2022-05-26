@@ -6,6 +6,7 @@
 #include "FSM.h"
 typedef enum {S0=0,S1,S2,S3,S4} State;
 static State State_1 = S0;
+
 void StateMachineUpdate(){
     switch(State_1){
     case S0:
@@ -14,7 +15,7 @@ void StateMachineUpdate(){
         }
         break;
     case S1:
-        if(Player.life == 0){
+        if((Player.life == 0)||(Player1.life == 0)){
             ledTimer = 990;
             State_1 = S2;
         }else if(Player.point == 15){
@@ -37,19 +38,11 @@ void StateMachineUpdate(){
         break;
     case S1:
     case S2:
-        Nokia5110_ClearBuffer();
-        GameOver();
-        Bunker_Draw();
-        Missile_Move();
-        Enemy_Move();
-        Player_Missile_Move();
-        Player_Missile_Draw();
-        AutoFire();
-        Player_Draw();
-        Enemy_Draw();
-        Missile_Draw();
-        Player_Point();
-        Nokia5110_DisplayBuffer();
+        if(Game == 0){
+            Draw();
+        }else if(Game == 1){
+            RoadMove();
+        }
         break;
     case S4:
         xTimerStop(xOneShotTimer,0);

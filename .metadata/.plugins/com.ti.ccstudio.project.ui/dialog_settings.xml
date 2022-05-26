@@ -5,7 +5,7 @@
 	<section name="com.ti.ccstudio.project.ui.internal.properties.DynamicPropertiesPageManager">
 	</section>
 	<section name="com.ti.ccstudio.project.ui.internal.wizards.importexport.ProjectImportPage">
-		<item key="CCS.BROWSE_DIRS_FILTER" value="/home/nghia/Downloads/Tiva-C-Series-TM4C123G-LaunchPad-Nokia5110-LCD-Screen-master/5110Lcd"/>
+		<item key="CCS.BROWSE_DIRS_FILTER" value="/home/nghia/ti/SW-TM4C-2.1.4.178/examples/boards/ek-tm4c123gxl/freertos_demo"/>
 		<item key="CCS.COPY_INTO_WORKSPACE" value="true"/>
 		<item key="CCS.IMPORT_REFERENCED_PROJECTS" value="true"/>
 		<item key="CCS.IMPORT_FROM_ARCHIVE" value="false"/>

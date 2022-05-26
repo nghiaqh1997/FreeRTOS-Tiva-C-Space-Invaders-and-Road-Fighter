@@ -13,6 +13,8 @@ ORDERED_OBJS += \
 "./Task2.obj" \
 "./Task3.obj" \
 "./Task4.obj" \
+"./Task5.obj" \
+"./Task6.obj" \
 "./TaskTimer.obj" \
 "./freertos_demo.obj" \
 "./sprite.obj" \
@@ -203,8 +205,8 @@ lab1.bin: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Images.obj" "Task1.obj" "Task2.obj" "Task3.obj" "Task4.obj" "TaskTimer.obj" "freertos_demo.obj" "sprite.obj" "startup_ccs.obj" "Config_Register/Config_Register.obj" "FSM/FSM.obj" "LAB/1_TASK/lab1.obj" "LAB/1_TASK/lab2.obj" "LAB/1_TASK/lab3.obj" "LAB/2_QUEUE/lab1.obj" "LAB/2_QUEUE/lab2.obj" "LAB/2_QUEUE/lab3.obj" "LAB/3_Interrupt/lab1.obj" "LAB/3_Interrupt/lab2.obj" "LAB/3_Interrupt/lab3.obj" "Nokia5110/SPI.obj" "third_party/FreeRTOS/Source/list.obj" "third_party/FreeRTOS/Source/queue.obj" "third_party/FreeRTOS/Source/tasks.obj" "third_party/FreeRTOS/Source/timers.obj" "third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "third_party/FreeRTOS/Source/portable/MemMang/heap_2.obj" "utils/uartstdio.obj" "utils/ustdlib.obj" 
-	-$(RM) "Images.d" "Task1.d" "Task2.d" "Task3.d" "Task4.d" "TaskTimer.d" "freertos_demo.d" "sprite.d" "startup_ccs.d" "Config_Register/Config_Register.d" "FSM/FSM.d" "LAB/1_TASK/lab1.d" "LAB/1_TASK/lab2.d" "LAB/1_TASK/lab3.d" "LAB/2_QUEUE/lab1.d" "LAB/2_QUEUE/lab2.d" "LAB/2_QUEUE/lab3.d" "LAB/3_Interrupt/lab1.d" "LAB/3_Interrupt/lab2.d" "LAB/3_Interrupt/lab3.d" "Nokia5110/SPI.d" "third_party/FreeRTOS/Source/list.d" "third_party/FreeRTOS/Source/queue.d" "third_party/FreeRTOS/Source/tasks.d" "third_party/FreeRTOS/Source/timers.d" "third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F/port.d" "third_party/FreeRTOS/Source/portable/MemMang/heap_2.d" "utils/uartstdio.d" "utils/ustdlib.d" 
+	-$(RM) "Images.obj" "Task1.obj" "Task2.obj" "Task3.obj" "Task4.obj" "Task5.obj" "Task6.obj" "TaskTimer.obj" "freertos_demo.obj" "sprite.obj" "startup_ccs.obj" "Config_Register/Config_Register.obj" "FSM/FSM.obj" "LAB/1_TASK/lab1.obj" "LAB/1_TASK/lab2.obj" "LAB/1_TASK/lab3.obj" "LAB/2_QUEUE/lab1.obj" "LAB/2_QUEUE/lab2.obj" "LAB/2_QUEUE/lab3.obj" "LAB/3_Interrupt/lab1.obj" "LAB/3_Interrupt/lab2.obj" "LAB/3_Interrupt/lab3.obj" "Nokia5110/SPI.obj" "third_party/FreeRTOS/Source/list.obj" "third_party/FreeRTOS/Source/queue.obj" "third_party/FreeRTOS/Source/tasks.obj" "third_party/FreeRTOS/Source/timers.obj" "third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F/port.obj" "third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.obj" "third_party/FreeRTOS/Source/portable/MemMang/heap_2.obj" "utils/uartstdio.obj" "utils/ustdlib.obj" 
+	-$(RM) "Images.d" "Task1.d" "Task2.d" "Task3.d" "Task4.d" "Task5.d" "Task6.d" "TaskTimer.d" "freertos_demo.d" "sprite.d" "startup_ccs.d" "Config_Register/Config_Register.d" "FSM/FSM.d" "LAB/1_TASK/lab1.d" "LAB/1_TASK/lab2.d" "LAB/1_TASK/lab3.d" "LAB/2_QUEUE/lab1.d" "LAB/2_QUEUE/lab2.d" "LAB/2_QUEUE/lab3.d" "LAB/3_Interrupt/lab1.d" "LAB/3_Interrupt/lab2.d" "LAB/3_Interrupt/lab3.d" "Nokia5110/SPI.d" "third_party/FreeRTOS/Source/list.d" "third_party/FreeRTOS/Source/queue.d" "third_party/FreeRTOS/Source/tasks.d" "third_party/FreeRTOS/Source/timers.d" "third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F/port.d" "third_party/FreeRTOS/Source/portable/MemMang/heap_2.d" "utils/uartstdio.d" "utils/ustdlib.d" 
 	-$(RM) "third_party/FreeRTOS/Source/portable/CCS/ARM_CM4F/portasm.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

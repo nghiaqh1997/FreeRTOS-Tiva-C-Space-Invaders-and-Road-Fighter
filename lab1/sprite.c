@@ -5,6 +5,8 @@
 #include "Task_def.h"
 static int a = 0;
 static int b = 0;
+static int c = 0;
+unsigned int count=0,road_flag=0;
 void Player_Init(){
     //Player.x = 32;
     Player.y = 47;
@@ -14,6 +16,10 @@ void Player_Init(){
     Player.explode[0] = BigExplosion0;
     a = 0;
     b = 0;
+    c = 0;
+    Player1.image = player_car;
+    Player1.x = 10;
+    Player1.life = 1;
 }
 void Player_Draw(){
     if(Player.life == 1){
@@ -229,7 +235,135 @@ void AutoFire(){
     delay++;
     if((Enemy[r].life==1)&&(delay%17==1)){
         if(Missile[r].life==0){
+            Missile[r].y = Enemy[r].y;
             Missile[r].life = 1;
         }
     }
 }
+void RoadMove(){
+    Nokia5110_ClearBuffer();
+    road_flag++;
+    if(road_flag > 0 && road_flag <6)
+    {
+        Nokia5110_PrintBMP(1, 10, road1, 0);
+        Nokia5110_PrintBMP(1, 46, road1_D, 0);
+        for(count=0;count<4;count++)
+        {
+            Nokia5110_PrintBMP(17+count*16, 10, road1, 0);
+            Nokia5110_PrintBMP(17+count*16, 46, road1_D, 0);
+        }
+
+    }
+    else if(road_flag > 5 && road_flag <11)
+    {
+        Nokia5110_PrintBMP(1, 10, road2, 0);
+        Nokia5110_PrintBMP(1, 46, road2_D, 0);
+        for(count=0;count<4;count++)
+        {
+            Nokia5110_PrintBMP(17+count*16, 10, road2, 0);
+            Nokia5110_PrintBMP(17+count*16, 46, road2_D, 0);
+        }
+    }
+    else if(road_flag > 10 && road_flag <16)
+    {
+        Nokia5110_PrintBMP(1, 10, road3, 0);
+        Nokia5110_PrintBMP(1, 46, road3_D, 0);
+        for(count=0;count<4;count++)
+        {
+            Nokia5110_PrintBMP(17+count*16, 10, road3, 0);
+            Nokia5110_PrintBMP(17+count*16, 46, road3_D, 0);
+        }
+    }
+    else if(road_flag > 15 && road_flag <21)
+    {
+        Nokia5110_PrintBMP(1, 10, road4, 0);
+        Nokia5110_PrintBMP(1, 46, road4_D, 0);
+        for(count=0;count<4;count++)
+        {
+            Nokia5110_PrintBMP(17+count*16, 10, road4, 0);
+            Nokia5110_PrintBMP(17+count*16, 46, road4_D, 0);
+        }
+    }
+    else
+    {
+        road_flag = 0;
+    }
+    for(count=0;count<2;count++)
+    {
+        if(Enemy1[count].life == 1)
+        {
+            Nokia5110_PrintBMP(Enemy1[count].x, Enemy1[count].y, Enemy1[count].image, 0);
+        }
+    }
+    if(Player1.life == 1){
+        Nokia5110_PrintBMP(Player1.x, Player1.y, Player1.image, 0);
+    }else if(Player1.life == 0){
+        Nokia5110_PrintBMP(Player1.x, Player1.y, Player.explode[0], 0);
+    }
+    Nokia5110_DisplayBuffer();
+}
+void Draw(){
+    Nokia5110_ClearBuffer();
+    Player_Draw();
+    Bunker_Draw();
+    Enemy_Draw();
+    Player_Missile_Draw();
+    Missile_Draw();
+    Nokia5110_DisplayBuffer();
+}
+void Car_Init(){
+    int i;
+    for(i=0;i<2;i++){
+        Enemy1[i].x = 68;
+        Enemy1[i].image = Enemy_car;
+        Enemy1[i].life = 0;
+    }
+}
+void Car_Create(){
+    c++;
+    if((Enemy1[1].life == 0) && (c%3==2)){
+        Enemy1[1].y = 15+rand()%26;
+        Enemy1[1].life = 1;
+        c = 0;
+        UARTprintf("1\n");
+    }
+    if(Enemy1[0].life == 0){
+        Enemy1[0].y = 15+rand()%26;
+        Enemy1[0].life = 1;
+        UARTprintf("0\n");
+    }
+
+}
+void GameOver1(){
+    int i;
+    for(i=0;i<2;i++){
+        if(Enemy1[i].life == 1){
+            if(((Enemy1[i].x<=(Player1.x+15))&&((Enemy1[i].x+15)>=(Player1.x+15))
+                    &&((Player1.y-9)<=Enemy1[i].y)&&((Player1.y-9)>=(Enemy1[i].y-9)))
+            ||((Enemy1[i].x<=(Player1.x+15))&&((Enemy1[i].x+15)>=(Player1.x+15))
+                    &&((Player1.y)<=Enemy1[i].y)&&((Player1.y)>=(Enemy1[i].y-9)))){
+                Player1.life = 0;
+            }
+            if(Enemy1[i].x<2){
+                Enemy1[i].x = 68;
+                Enemy1[i].life = 0;
+            }
+            Enemy1[i].x -= 1;
+        }
+        if(Enemy1[0].x == 20){
+            xSemaphoreGive(xMutex);
+        }
+        if(Enemy1[0].x < 2){
+            xSemaphoreGive(xMutex);
+        }
+        if(Enemy1[1].x < 2){
+            xSemaphoreGive(xMutex);
+        }
+    }
+}
+
+
+
+
+
+
